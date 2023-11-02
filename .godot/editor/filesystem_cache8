@@ -1,0 +1,27 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1698947411
+default_bus_layout.tres::AudioBusLayout::-1::1697131458::0::1::::<><>::
+default_env.tres::Environment::-1::1697131458::0::1::::<><>::
+icon.png::CompressedTexture2D::1845792856963145103::1697131443::1697131479::1::::<><>::
+::res://art/::1697131480
+body.material::StandardMaterial3D::-1::1697131443::0::1::::<><>::
+eye.material::StandardMaterial3D::-1::1697131443::0::1::::<><>::
+House In a Forest Loop.ogg::AudioStreamOggVorbis::5196898313537344375::1697131443::1697131479::1::::<><>::
+mob.glb::PackedScene::6892142779551512158::1697131443::1697131480::1::::<><>::
+mob_body.material::StandardMaterial3D::-1::1697131443::0::1::::<><>::
+mob_eye.material::StandardMaterial3D::-1::1697131443::0::1::::<><>::
+player.glb::PackedScene::154208015556809935::1697131443::1697131480::1::::<><>::
+pupil.material::StandardMaterial3D::-1::1697131443::0::1::::<><>::
+::res://fonts/::1697131479
+LICENSE.txt::TextFile::-1::1697131443::0::1::::<><>::
+Montserrat-Medium.ttf::FontFile::5884270548501670607::1697131443::1697131479::1::::<><>::
+::res://scenes/::1698781454
+audio_stream_player.tscn::PackedScene::3564318447966484532::1698781454::0::1::::<><>::uid://cgbofkjmn764r::::res://art/House In a Forest Loop.ogg
+main.gd::GDScript::-1::1698781410::0::1::::<>Node<>::
+main.tscn::PackedScene::6651181617560801694::1698781454::0::1::::<><>::uid://dxhvgsi604253::::res://scenes/player.tscn<>res://scenes/main.gd<>uid://cpqlcqoyir8ml::::res://scenes/mob.tscn<>uid://cp3ncuegn83jv::::res://fonts/Montserrat-Medium.ttf<>res://scenes/ScoreLabel.gd
+mob.tscn::PackedScene::5859376387632596911::1698781454::0::1::::<><>::res://scripts/mob.gd<>uid://c5gut43c3mrfq::::res://art/mob.glb
+player.tscn::PackedScene::8789342829865808092::1698781454::0::1::::<><>::uid://cgx1vye0kytj::::res://art/player.glb<>res://scripts/player.gd
+ScoreLabel.gd::GDScript::-1::1698772002::0::1::::<>Label<>::
+::res://scripts/::1698781454
+mob.gd::GDScript::-1::1698781454::0::1::::<>CharacterBody3D<>::
+player.gd::GDScript::-1::1698781454::0::1::::<>CharacterBody3D<>::

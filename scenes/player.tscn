@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxhvgsi604253"]
+
+[ext_resource type="PackedScene" uid="uid://cgx1vye0kytj" path="res://art/player.glb" id="1_3lpfa"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_d0x6q"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5j3qw"]
+radius = 0.805054
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vy1yh"]
+height = 0.298645
+radius = 1.88972
+
+[sub_resource type="Animation" id="Animation_14lie"]
+resource_name = "float"
+length = 1.2
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nx2jo"]
+_data = {
+"float": SubResource("Animation_14lie")
+}
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.114329, 0)
+script = ExtResource("1_d0x6q")
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.384287, 0)
+
+[node name="Player" parent="Pivot" instance=ExtResource("1_3lpfa")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.341095, 0)
+shape = SubResource("SphereShape3D_5j3qw")
+
+[node name="ModDetector" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ModDetector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.102982, 1.09421, -0.0538602)
+shape = SubResource("CylinderShape3D_vy1yh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nx2jo")
+}
+
+[connection signal="body_entered" from="ModDetector" to="." method="_on_mod_detector_body_entered"]
